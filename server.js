@@ -53,7 +53,6 @@ app.post('/',async (request,response)=> {
     const newComment= new UserComments(
     {
         name: request.body.name,     
-        comment: request.body.comment,
     }
     );
 
