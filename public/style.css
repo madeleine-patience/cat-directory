@@ -1,0 +1,25 @@
+.cat-directory{
+background-color: pink;
+display:flex;
+align-items: center;
+}
+
+.name-links{
+background-color: orange;
+width: 20%;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.information-display{
+background-color: green;
+width: 70%;
+
+}
+
+button{
+width: 100px;
+margin-top: 5px;
+background-color: lightgray;
+}
