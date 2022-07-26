@@ -10,30 +10,58 @@
     <link rel = "stylesheet" href="/style.css">
 
     <!--GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
 
     <!--FONT AWESOME -->
     <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
-<!--ICONS-->
+    <!--ICONS-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
+
+
 </head>
+
+
 <body>
-<h1> My Foster Kitties </h2>
+<h1> Considerate Cat Kitties</h1>
 <section class="cat-directory">
+
 <section class= "name-links" >
         <button id="molly"> Molly </button>
         <button id="wendy"> Wendy </button>
         <button id="phaedra"> Phaedra </button>
         <button id="butters"> Butters </button>
         <button id='charlotte and kittens'> Charlotte </button>
+        <button id='gigi'> Gigi </button>
+        <button id='mrMystery'> Mr Mystery </button>
+        <button id='mama and kittens'> Mama </button>
+        <button id='cricket'> Cricket </button>
+        <button id='cole'> Cole </button>
+        <button id='elmer'> Elmer </button>
+        <button id='abe'> Abe </button>
+        <button id='alice'> Alice </button>
+        <button id='june'> June </button>
+        <button id='daniel'> Daniel </button>
+        <button id='hans'> Hans </button>
+        <button id='heidi'> Heidi </button>
+        <button id='fiona'> Fiona </button>
+        <button id='sienna'> Sienna </button>
+        <button id='aspen'> Aspen </button>
+        <button id='henry'> Henry </button>
+        <button id='holden'> Holden </button>
+        <button id='ellen'> Ellen </button>
+        <button id='gemma'> Gemma </button>
+        <button id='piper'> Piper </button>
 
 </section>
 
 
 <section class="information-display">
-    <img src=""> 
-    <h2 class="catName"> Name </h2>
+    <img src="https://consideratecat.com/wp-content/uploads/2022/04/Untitled_Artwork-168.jpg"> 
+    <h2 class="catName"> Click through the buttons on the left to read about all the cats in the Considerate Cat Family. All of these cats have been rescued, rehabed, fostered and apoted into nice homes. </h2>
     <h3 class="catStory">  </h3>
 </section>
 </section>
@@ -41,14 +69,29 @@
 
 
 <section class="comments">
-  <form action="/" method="POST" class="todo-header">
-                <input type="text" name="title" value="title">
-                <textarea rows="6" cols="45" name="content">content</textarea>
-                <button type="submit"><span class="fas fa-plus">Add Task</span></button>
+            <form action="/" method="POST" class="todo-header">
+                <input type="text" name="title" value="Your Name">
+                <textarea rows="6" cols="45" name="content">Your Comment</textarea>
+                <button type="submit">Comment</button>
+              
             </form>
+            <ul class= "posted-comments">
+                <% UserComments.forEach(content => {%> 
+                    <li class ="individual-comment">
+                        <div class="individual-comment-name"> <%= content.name %> </div>
+                        <div class="individual-comment-comment"> <%= content.comment %> </div>
+                        <div class="individual-comment-date"> <%= content.date %> </div>
+                        <a href ="/edit/<%=content._id%>" class ='edit'>
+                        <span class="fas fa-edit"> </span></a>
+                        <a href="/remove/<%= content._id %>" class="remove"> <span class="fas fa-times"></span></a>
+
+                </li>
+              <%  }) %>
+            </ul>
 </section>
 
 
 
 </body>
 </html>
+<script src="/main.js"></script>
